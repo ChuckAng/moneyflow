@@ -12,7 +12,6 @@ import 'package:path_provider/path_provider.dart' as pathProvider;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory = await pathProvider.getApplicationDocumentsDirectory();
-
   await Hive.initFlutter(directory.path);
   await Hive.openBox('money');
 
