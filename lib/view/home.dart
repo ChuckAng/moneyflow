@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
             radius: 25,
             titleStyle: const TextStyle(
                 fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
-            titlePositionPercentageOffset: 0.55,
+            titlePositionPercentageOffset: 0.6,
           );
 
         case 1:
@@ -36,7 +36,7 @@ class Home extends StatelessWidget {
             radius: 25,
             titleStyle: const TextStyle(
                 fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white),
-            titlePositionPercentageOffset: 0.55,
+            titlePositionPercentageOffset: 0.6,
           );
 
         default:
@@ -119,7 +119,7 @@ class Home extends StatelessWidget {
                             letterSpacing: 5,
                             fontSize: 20,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white54,
+                            color: Colors.white30,
                           ))
                     ],
                   );
@@ -180,12 +180,7 @@ class Home extends StatelessWidget {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
-                  SizedBox(
-                    height: size.height * 0.05,
-                  ),
+                  SizedBox(height: 25,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -337,12 +332,6 @@ class Home extends StatelessWidget {
             var _showDate = snapshot.data![index]['date'];
             String formattedDate = DateFormat('d  MMM  y').format(_showDate);
 
-            var _transactions = [formattedDate];
-
-            _transactions.sort((a, b) {
-              return a.compareTo(b);
-            });
-
             switch (_category) {
               case 'Netflix':
                 _iconCategory = _iconCategory = FaIcon(
@@ -397,7 +386,7 @@ class Home extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(top: 20),
                               height: 100,
-                              width: 130,
+                              width: 100,
                               child: Text('$note',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(
@@ -459,7 +448,7 @@ class Home extends StatelessWidget {
                             Container(
                               padding: EdgeInsets.only(top: 20),
                               height: 100,
-                              width: 130,
+                              width: 100,
                               child: Text('$note',
                                   textAlign: TextAlign.start,
                                   style: TextStyle(

@@ -26,7 +26,7 @@ class DatePickerController extends GetxController {
     final DateTime? pickedDate = await showDatePicker(
       context: context,
       initialDate: selectedDate,
-      firstDate: DateTime(2022, 01),
+      firstDate: DateTime(2021, 01),
       lastDate: DateTime(2100, 01),
     );
 
